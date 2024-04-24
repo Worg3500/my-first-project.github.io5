@@ -1,0 +1,14 @@
+{% extends 'main/layout.html'  %}
+
+{% block title %}{{ article.full_text }}{% endblock  %}
+
+{% block content %}
+    <div class="features">
+        <h1>{{ article.title }}</h1>
+        <h1>{{ article.full_text }}</h1>
+
+
+    </div>
+
+    {% include 'main/test.html' %}
+{% endblock  %}

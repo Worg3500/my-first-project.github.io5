@@ -1,0 +1,22 @@
+{% extends 'main/layout.html'  %}
+
+{% block title %}Подробная Биография Гагарина Юрия Алексеевича{% endblock  %}
+
+{% block content %}
+    <div class="features">
+        <h1>Подробная Биография Гагарина Юрия Алексеевича</h1>
+        <h2><img src="http://niskgd.ru/mix/p29/a07/small/102256754.jpg" ></h2>
+
+
+
+        {% for el in news %}
+            <div class="alert alert-warning">
+                <h3>{{ el.title }}</h3>
+                <p>{{ el.anons }}</p>
+                <a href="{% url 'news-detail' el.id %}" class="btn btn-warning">Подробнее...</a>
+             </div>
+        {% endfor %}
+    </div>
+
+    {% include 'main/test.html' %}
+{% endblock  %}
